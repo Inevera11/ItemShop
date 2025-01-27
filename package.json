@@ -1,4 +1,17 @@
 {
+    "name": "item_shop",
+    "version": "1.0.0",
+    "description": "Complete item shop Node.js + SQL",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js",
+        "start-server": "node server.js"
+    },
+    "author": "Zuzanna Bożek",
+    "devDependencies": {
+        "nodemon": "^1.18.3"
+    },
     "dependencies": {
         "body-parser": "^1.18.3",
         "ejs": "^3.1.10",

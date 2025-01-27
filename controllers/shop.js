@@ -52,16 +52,14 @@ exports.getCartPage = (req, res, next) => {
 };
 
 exports.postCartPage = (req, res, next) => {
-    console.log(req.body);
     const prodId = req.body.productId;
     Product.findById(prodId, (product) => {
-        console.log(product);
         Cart.addProduct(prodId, product.price);
     });
     res.redirect('/cart');
 };
 
-exports.postCartDeleteProduct = (req, res, next) => {
+exports.postCartDeleteProductPage = (req, res, next) => {
     const prodId = req.body.productId;
     Product.findById(prodId, (product) => {
         Cart.deleteProduct(prodId, product.price);
