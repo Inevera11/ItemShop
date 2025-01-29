@@ -42,7 +42,6 @@ exports.getIndexPage = (req, res, next) => {
 exports.getCartPage = (req, res, next) => {
     Cart.getCart()
         .then(([rows, dataFields]) => {
-            console.log(rows);
             const total = rows.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);
             res.render('shop/cart', {
                 path: '/cart',
